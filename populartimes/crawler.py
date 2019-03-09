@@ -394,7 +394,7 @@ def get_populartimes(api_key, place_id):
 
 
 def get_populartimes_by_detail(api_key, detail):
-    address = detail["formatted_address"] #if "formatted_address" in detail else detail["place_id"]
+    address = detail["formatted_address"] if "formatted_address" in detail else detail["place_id"]
 
     place_identifier = "{} {}".format(detail["name"], address)
 
